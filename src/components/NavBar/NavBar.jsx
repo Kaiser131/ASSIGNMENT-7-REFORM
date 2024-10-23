@@ -1,7 +1,15 @@
 import { CgProfile } from "react-icons/cg";
+import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
+
+    const navLinks = <>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/login'>Login</NavLink>
+        <NavLink to='/register'>Register</NavLink>
+    </>;
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -26,10 +34,12 @@ const NavBar = () => {
                     <a className="btn btn-ghost text-4xl font-bold">Recipe Calories</a>
                 </div>
                 <div className="navbar-center hidden lg:flex gap-10">
-                    <a href="Home">Home</a>
-                    <a href="Recipe">Recipe</a>
-                    <a href="About">About</a>
-                    <a href="Search">Search</a>
+
+                    <ul className="gap-5">
+
+                        {navLinks}
+
+                    </ul>
 
                 </div>
                 <div className="navbar-end flex gap-3">
